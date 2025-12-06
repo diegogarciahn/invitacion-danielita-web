@@ -1,65 +1,259 @@
-import Image from "next/image";
+import headerImage from 'figma:asset/44f8e112051cde060cb818cc3143c9e98e47507c.png';
+import quinceaneraPhoto from 'figma:asset/a9f9fa670884b23c08c045cbcddb0c8544041d94.png';
+import quinceaneraPhoto2 from 'figma:asset/1865e3ec7a35bff53dbe6d6684b7b561ac0bedf0.png';
+import quinceaneraPhoto3 from 'figma:asset/45cd483a805c44404270bc8cea240a9907a15a62.png';
+import countdownBg from 'figma:asset/b79ce2fd62fdaac53ac4e4be39ddaff686801b26.png';
+import footerImage from 'figma:asset/84e6b2ca1b48490a0e3950cbc64d877e85505545.png';
+import { PhotoSlider } from './PhotoSlider';
+import { Countdown } from './Countdown';
+import { GuestSection } from './GuestSection';
 
-export default function Home() {
+export function QuinceanerraInvitation() {
+  // Fecha del evento - 26 de Diciembre de 2025 a las 20:00
+  const eventDate = new Date('2025-12-26T20:00:00');
+  
+  // Nombre del invitado - Personalizable
+  const guestName = "Familia García Pineda";
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="min-h-screen bg-white">
+      {/* Header Hero Section */}
+      <header className="relative h-screen w-full overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${headerImage})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white"></div>
+        </div>
+        
+        <div className="relative h-full flex items-end justify-center pb-20">
+          <div className="text-center space-y-6 px-4">
+            <div className="space-y-2">
+              <p className="text-sm tracking-[0.4em] text-neutral-600 uppercase">
+                Mis Quince Años
+              </p>
+              <h1 className="text-6xl md:text-7xl tracking-tight text-neutral-800">
+                Daniela Bolaños
+              </h1>
+            </div>
+            <div className="w-16 h-px bg-orange-400 mx-auto"></div>
+            <p className="text-neutral-600 tracking-wide">
+              26 de Diciembre, 2025
+            </p>
+          </div>
+        </div>
+      </header>
+
+      {/* Sección de bienvenida */}
+      <section className="py-24 px-6 md:px-12 max-w-4xl mx-auto text-center">
+        <div className="space-y-6">
+          <p className="text-xs tracking-[0.3em] text-orange-400 uppercase">
+            Una celebración especial
+          </p>
+          <h2 className="text-3xl md:text-4xl text-neutral-800 max-w-2xl mx-auto">
+            Con gran alegría te invito a celebrar este momento tan importante en mi vida
+          </h2>
+          <p className="text-neutral-600 max-w-xl mx-auto leading-relaxed">
+            Acompáñame en esta noche mágica donde daré un paso más hacia mis sueños
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Sección con foto y mensaje personal */}
+      <section className="py-24 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Slider de Imágenes */}
+            <div className="order-2 md:order-1">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-orange-100 to-orange-50 rounded-lg opacity-50"></div>
+                <div className="relative">
+                  <PhotoSlider
+                    images={[quinceaneraPhoto, quinceaneraPhoto2, quinceaneraPhoto3]}
+                    autoplaySpeed={4000}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Texto */}
+            <div className="order-1 md:order-2 space-y-6">
+              <div className="w-12 h-px bg-orange-400"></div>
+              <h3 className="text-3xl md:text-4xl text-neutral-800">
+                Un sueño hecho realidad
+              </h3>
+              <div className="space-y-4 text-neutral-600 leading-relaxed">
+                <p>
+                  Hoy cumplo quince años y mi corazón está lleno de gratitud. Este día marca el inicio de una nueva etapa en mi vida, llena de sueños, esperanzas y metas por alcanzar.
+                </p>
+                <p>
+                  Quiero compartir este momento tan especial contigo, porque tu presencia y cariño han sido parte fundamental de mi camino. Gracias por estar aquí y ser parte de mi historia.
+                </p>
+                <p className="italic text-neutral-500">
+                  Con todo mi cariño,
+                </p>
+                <p className="text-orange-400">
+                  Daniela
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* Cuenta Regresiva con efecto liquid glass */}
+      <section className="relative py-32 px-6 md:px-12 overflow-hidden">
+        {/* Imagen de fondo */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${countdownBg})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-orange-400/30 via-orange-300/20 to-orange-400/30"></div>
+        </div>
+
+        {/* Contenido */}
+        <div className="relative z-10 max-w-4xl mx-auto text-center space-y-12">
+          <div className="space-y-4">
+            <p className="text-xs tracking-[0.4em] text-white uppercase drop-shadow-lg">
+              Faltan
+            </p>
+            <h2 className="text-3xl md:text-4xl text-white drop-shadow-xl">
+              El gran día está cerca
+            </h2>
+          </div>
+
+          <Countdown targetDate={eventDate} />
+
+          <div className="pt-8">
+            <p className="text-sm text-white/90 drop-shadow-lg tracking-wide">
+              No te pierdas este momento especial
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Detalles del evento */}
+      <section className="py-20 bg-neutral-50/50">
+        <div className="max-w-6xl mx-auto px-6 md:px-12">
+          <div className="grid md:grid-cols-3 gap-12">
+            {/* Fecha */}
+            <div className="text-center space-y-4 p-8">
+              <div className="w-12 h-12 mx-auto rounded-full bg-orange-100 flex items-center justify-center">
+                <div className="w-6 h-6 border-2 border-orange-400 rounded-sm"></div>
+              </div>
+              <div className="space-y-2">
+                <p className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
+                  Fecha
+                </p>
+                <p className="text-2xl text-neutral-800">15</p>
+                <p className="text-neutral-600">Marzo 2025</p>
+                <p className="text-sm text-neutral-500">Sábado</p>
+              </div>
+            </div>
+
+            {/* Hora */}
+            <div className="text-center space-y-4 p-8">
+              <div className="w-12 h-12 mx-auto rounded-full bg-orange-100 flex items-center justify-center">
+                <div className="w-6 h-6 border-2 border-orange-400 rounded-full"></div>
+              </div>
+              <div className="space-y-2">
+                <p className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
+                  Hora
+                </p>
+                <p className="text-2xl text-neutral-800">20:00</p>
+                <p className="text-neutral-600">en punto</p>
+                <p className="text-sm text-neutral-500">Recepción</p>
+              </div>
+            </div>
+
+            {/* Lugar */}
+            <div className="text-center space-y-4 p-8">
+              <div className="w-12 h-12 mx-auto rounded-full bg-orange-100 flex items-center justify-center">
+                <div className="w-6 h-6 border-2 border-orange-400 rounded-lg"></div>
+              </div>
+              <div className="space-y-2">
+                <p className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
+                  Lugar
+                </p>
+                <p className="text-neutral-800">La Fontana</p>
+                <p className="text-sm text-neutral-600">Salón de Eventos</p>
+                <p className="text-xs text-neutral-500">Av. Principal 123</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dress Code */}
+      <section className="py-20 px-6 md:px-12">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-gradient-to-br from-orange-50 to-neutral-50 rounded-lg p-12 text-center space-y-6">
+            <p className="text-xs tracking-[0.3em] text-orange-400 uppercase">
+              Código de Vestimenta
+            </p>
+            <p className="text-2xl text-neutral-800">Etiqueta Formal</p>
+            <p className="text-sm text-neutral-600 italic">
+              Se sugiere vestimenta en tonos claros y pasteles
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Confirmación de asistencia */}
+      <section className="py-24 px-6 md:px-12 bg-neutral-50/50">
+        <div className="max-w-2xl mx-auto text-center space-y-8">
+          <div className="space-y-4">
+            <p className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
+              Confirma tu Asistencia
+            </p>
+            <p className="text-neutral-600 leading-relaxed">
+              Tu presencia es muy importante para mí. Por favor confirma tu asistencia antes del 1 de Marzo
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            <div className="inline-block bg-white px-8 py-4 rounded-full shadow-sm">
+              <p className="text-neutral-800">+52 555 123 4567</p>
+            </div>
+            <p className="text-xs text-neutral-500">WhatsApp disponible</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Sección de invitado */}
+      <GuestSection guestName={guestName} />
+
+      {/* Footer con efecto glassmorphism */}
+      <footer className="relative py-32 md:py-40 overflow-hidden">
+        {/* Imagen de fondo */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${footerImage})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/20"></div>
+        </div>
+
+        {/* Contenido con efecto glass */}
+        <div className="relative z-10 flex items-center justify-center px-6">
+          <div className="text-center">
+            <h2 
+              className="text-7xl md:text-8xl lg:text-9xl tracking-wider uppercase"
+              style={{
+                background: `linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 237, 213, 0.8) 50%, rgba(255, 255, 255, 0.9) 100%)`,
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                textShadow: '0 8px 32px rgba(251, 146, 60, 0.2)',
+                backdropFilter: 'blur(10px)',
+                filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))'
+              }}
+            >
+              Te Espero
+            </h2>
+            <div className="mt-8 w-24 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
