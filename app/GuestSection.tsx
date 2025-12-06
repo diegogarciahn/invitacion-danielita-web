@@ -52,7 +52,7 @@ export function GuestSection({ guestName, initialCount = 1 }: GuestSectionProps)
             <p className="text-sm text-neutral-600">
               Número de personas
             </p>
-            
+
             <div className="flex items-center justify-center gap-6">
               {/* Botón decrementar */}
               <button
@@ -85,9 +85,12 @@ export function GuestSection({ guestName, initialCount = 1 }: GuestSectionProps)
               </button>
             </div>
 
-            <p className="text-xs text-neutral-500 italic">
-              {guestCount === 1 ? '1 persona' : `${guestCount} personas`}
-            </p>
+            <button className="group relative mt-8 px-12 py-4 bg-linear-to-br from-orange-50 to-neutral-50 border-2 border-orange-200 text-neutral-800 rounded-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-orange-200/50 hover:scale-105 active:scale-100 hover:border-orange-300">
+              <div className="absolute inset-0 bg-linear-to-br from-orange-100 to-orange-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <span className="relative text-base font-medium tracking-wide">
+                Confirmar Asistencia
+              </span>
+            </button>
           </div>
         </div>
       </div>

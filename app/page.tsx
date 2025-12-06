@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import headerImage from '@/assets/44f8e112051cde060cb818cc3143c9e98e47507c.png';
 import quinceaneraPhoto from '@/assets/a9f9fa670884b23c08c045cbcddb0c8544041d94.png';
 import quinceaneraPhoto2 from '@/assets/1865e3ec7a35bff53dbe6d6684b7b561ac0bedf0.png';
@@ -17,10 +18,15 @@ export default function QuinceanerraInvitation() {
     <div className="min-h-screen bg-white">
       {/* Header Hero Section */}
       <header className="relative h-screen w-full overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${headerImage})` }}
-        >
+        <div className="absolute inset-0">
+          <Image
+            src={headerImage}
+            alt="Header background"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
           <div className="absolute inset-0 bg-linear-to-b from-black/10 via-transparent to-white"></div>
         </div>
         
@@ -102,10 +108,14 @@ export default function QuinceanerraInvitation() {
       {/* Cuenta Regresiva con efecto liquid glass */}
       <section className="relative py-32 px-6 md:px-12 overflow-hidden">
         {/* Imagen de fondo */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${countdownBg})` }}
-        >
+        <div className="absolute inset-0">
+          <Image
+            src={countdownBg}
+            alt="Countdown background"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
           <div className="absolute inset-0 bg-linear-to-b from-orange-400/30 via-orange-300/20 to-orange-400/30"></div>
         </div>
 
@@ -115,18 +125,10 @@ export default function QuinceanerraInvitation() {
             <p className="text-xs tracking-[0.4em] text-white uppercase drop-shadow-lg">
               Faltan
             </p>
-            <h2 className="text-3xl md:text-4xl text-white drop-shadow-xl">
-              El gran día está cerca
-            </h2>
+            <div className='h-15'></div>
           </div>
 
           <Countdown targetDate={eventDate} />
-
-          <div className="pt-8">
-            <p className="text-sm text-white/90 drop-shadow-lg tracking-wide">
-              No te pierdas este momento especial
-            </p>
-          </div>
         </div>
       </section>
 
@@ -224,10 +226,14 @@ export default function QuinceanerraInvitation() {
       {/* Footer con efecto glassmorphism */}
       <footer className="relative py-32 md:py-40 overflow-hidden">
         {/* Imagen de fondo */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${footerImage})` }}
-        >
+        <div className="absolute inset-0">
+          <Image
+            src={footerImage}
+            alt="Footer background"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
           <div className="absolute inset-0 bg-linear-to-b from-white/10 via-transparent to-white/20"></div>
         </div>
 
