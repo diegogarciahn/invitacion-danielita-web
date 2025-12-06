@@ -21,7 +21,7 @@ export default function QuinceanerraInvitation() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${headerImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white"></div>
+          <div className="absolute inset-0 bg-linear-to-b from-black/10 via-transparent to-white"></div>
         </div>
         
         <div className="relative h-full flex items-end justify-center pb-20">
@@ -64,7 +64,7 @@ export default function QuinceanerraInvitation() {
             {/* Slider de Imágenes */}
             <div className="order-2 md:order-1">
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-orange-100 to-orange-50 rounded-lg opacity-50"></div>
+                <div className="absolute -inset-4 bg-linear-to-br from-orange-100 to-orange-50 rounded-lg opacity-50"></div>
                 <div className="relative">
                   <PhotoSlider
                     images={[quinceaneraPhoto, quinceaneraPhoto2, quinceaneraPhoto3]}
@@ -106,7 +106,7 @@ export default function QuinceanerraInvitation() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${countdownBg})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-orange-400/30 via-orange-300/20 to-orange-400/30"></div>
+          <div className="absolute inset-0 bg-linear-to-b from-orange-400/30 via-orange-300/20 to-orange-400/30"></div>
         </div>
 
         {/* Contenido */}
@@ -185,7 +185,7 @@ export default function QuinceanerraInvitation() {
       {/* Dress Code */}
       <section className="py-20 px-6 md:px-12">
         <div className="max-w-3xl mx-auto">
-          <div className="bg-gradient-to-br from-orange-50 to-neutral-50 rounded-lg p-12 text-center space-y-6">
+          <div className="bg-linear-to-br from-orange-50 to-neutral-50 rounded-lg p-12 text-center space-y-6">
             <p className="text-xs tracking-[0.3em] text-orange-400 uppercase">
               Código de Vestimenta
             </p>
@@ -228,7 +228,7 @@ export default function QuinceanerraInvitation() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${footerImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/20"></div>
+          <div className="absolute inset-0 bg-linear-to-b from-white/10 via-transparent to-white/20"></div>
         </div>
 
         {/* Contenido con efecto glass */}
@@ -248,7 +248,7 @@ export default function QuinceanerraInvitation() {
             >
               Te Espero
             </h2>
-            <div className="mt-8 w-24 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
+            <div className="mt-8 w-24 h-px bg-linear-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
           </div>
         </div>
       </footer>

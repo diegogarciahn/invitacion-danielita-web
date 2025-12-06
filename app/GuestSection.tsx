@@ -24,7 +24,7 @@ export function GuestSection({ guestName, initialCount = 1 }: GuestSectionProps)
   };
 
   return (
-    <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-white via-orange-50/30 to-white">
+    <section className="py-20 px-6 md:px-12 bg-linear-to-b from-white via-orange-50/30 to-white">
       <div className="max-w-3xl mx-auto">
         <div className="text-center space-y-8">
           {/* Título */}
@@ -33,7 +33,7 @@ export function GuestSection({ guestName, initialCount = 1 }: GuestSectionProps)
               Invitación especial para
             </p>
             <div className="relative inline-block">
-              <div className="absolute -inset-4 bg-gradient-to-r from-orange-100 via-orange-50 to-orange-100 opacity-40 blur-xl rounded-full"></div>
+              <div className="absolute -inset-4 bg-linear-to-r from-orange-100 via-orange-50 to-orange-100 opacity-40 blur-xl rounded-full"></div>
               <h2 className="relative text-4xl md:text-5xl text-neutral-800 px-8 py-4">
                 {guestName}
               </h2>
@@ -42,9 +42,9 @@ export function GuestSection({ guestName, initialCount = 1 }: GuestSectionProps)
 
           {/* Separador decorativo */}
           <div className="flex items-center justify-center gap-3">
-            <div className="w-12 h-px bg-gradient-to-r from-transparent to-orange-300"></div>
+            <div className="w-12 h-px bg-linear-to-r from-transparent to-orange-300"></div>
             <div className="w-2 h-2 rounded-full bg-orange-400"></div>
-            <div className="w-12 h-px bg-gradient-to-l from-transparent to-orange-300"></div>
+            <div className="w-12 h-px bg-linear-to-l from-transparent to-orange-300"></div>
           </div>
 
           {/* Control de cantidad de personas */}
@@ -66,7 +66,7 @@ export function GuestSection({ guestName, initialCount = 1 }: GuestSectionProps)
 
               {/* Contador */}
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-100 to-orange-50 rounded-2xl blur-sm"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-orange-100 to-orange-50 rounded-2xl blur-sm"></div>
                 <div className="relative bg-white border-2 border-orange-200 rounded-2xl px-10 py-6 shadow-sm">
                   <p className="text-5xl text-neutral-800 min-w-[60px] text-center">
                     {guestCount}
