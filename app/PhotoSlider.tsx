@@ -32,14 +32,11 @@ export function PhotoSlider({ images, autoplaySpeed = 4000 }: PhotoSliderProps) 
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {images.map((image, index) => (
-            <div key={index} className="min-w-full relative aspect-4/5">
+            <div key={index} className="min-w-full">
               <Image 
                 src={image} 
                 alt={`Slide ${index + 1}`} 
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority={index === 0}
+                className="w-full h-full object-cover"
               />
             </div>
           ))}

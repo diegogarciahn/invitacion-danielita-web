@@ -1,18 +1,16 @@
-import headerImage from 'figma:asset/44f8e112051cde060cb818cc3143c9e98e47507c.png';
-import quinceaneraPhoto from 'figma:asset/a9f9fa670884b23c08c045cbcddb0c8544041d94.png';
-import quinceaneraPhoto2 from 'figma:asset/1865e3ec7a35bff53dbe6d6684b7b561ac0bedf0.png';
-import quinceaneraPhoto3 from 'figma:asset/45cd483a805c44404270bc8cea240a9907a15a62.png';
-import countdownBg from 'figma:asset/b79ce2fd62fdaac53ac4e4be39ddaff686801b26.png';
-import footerImage from 'figma:asset/84e6b2ca1b48490a0e3950cbc64d877e85505545.png';
+import headerImage from '@/assets/44f8e112051cde060cb818cc3143c9e98e47507c.png';
+import quinceaneraPhoto from '@/assets/a9f9fa670884b23c08c045cbcddb0c8544041d94.png';
+import quinceaneraPhoto2 from '@/assets/1865e3ec7a35bff53dbe6d6684b7b561ac0bedf0.png';
+import quinceaneraPhoto3 from '@/assets/45cd483a805c44404270bc8cea240a9907a15a62.png';
+import countdownBg from '@/assets/b79ce2fd62fdaac53ac4e4be39ddaff686801b26.png';
+import footerImage from '@/assets/84e6b2ca1b48490a0e3950cbc64d877e85505545.png';
 import { PhotoSlider } from './PhotoSlider';
 import { Countdown } from './Countdown';
 import { GuestSection } from './GuestSection';
 
-export function QuinceanerraInvitation() {
+export default function QuinceanerraInvitation() {
   // Fecha del evento - 26 de Diciembre de 2025 a las 20:00
   const eventDate = new Date('2025-12-26T20:00:00');
-  
-  // Nombre del invitado - Personalizable
   const guestName = "Familia García Pineda";
 
   return (
