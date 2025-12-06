@@ -36,7 +36,7 @@ export default function QuinceanerraInvitation() {
               <p className="text-sm tracking-[0.4em] text-neutral-600 uppercase font-playfair">
                 Mis Quince Años
               </p>
-              <h1 className="text-6xl md:text-7xl tracking-tight text-neutral-700 font-libre-baskerville">
+              <h1 className="text-6xl md:text-7xl tracking-tight text-(--primary-text) font-libre-baskerville ">
                 Daniela Bolaños
               </h1>
             </div>
@@ -51,7 +51,7 @@ export default function QuinceanerraInvitation() {
       {/* Sección de bienvenida */}
       <section className="py-24 px-6 md:px-12 max-w-4xl mx-auto text-center">
         <div className="space-y-5">
-          <p className="text-xs tracking-[0.3em] text-orange-400 uppercase">
+          <p className="text-xs tracking-[0.3em] text-(--secondary-text) uppercase">
             Una celebración especial
           </p>
           <h2 className="text-2xl md:text-4xl text-neutral-800 max-w-2xl mx-auto font-libre-baskerville">
@@ -196,7 +196,8 @@ export default function QuinceanerraInvitation() {
       <GuestSection guestName={guestName} />
 
       {/* Footer con efecto glassmorphism */}
-      <footer className="relative py-32 md:py-40 overflow-hidden">
+      {/* Footer - Diseño creativo con imagen y texto "Te Espero" */}
+      <footer className="relative h-screen overflow-hidden">
         {/* Imagen de fondo */}
         <div className="absolute inset-0">
           <Image
@@ -204,29 +205,69 @@ export default function QuinceanerraInvitation() {
             alt="Footer background"
             fill
             className="object-cover"
+            style={{ objectPosition: '70% center' }}
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-linear-to-b from-white/10 via-transparent to-white/20"></div>
         </div>
 
-        {/* Contenido con efecto glass */}
-        <div className="relative z-10 flex items-center justify-center px-6">
-          <div className="text-center">
-            <h2 
-              className="text-7xl md:text-8xl lg:text-9xl tracking-wider uppercase"
-              style={{
-                background: `linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 237, 213, 0.8) 50%, rgba(255, 255, 255, 0.9) 100%)`,
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                textShadow: '0 8px 32px rgba(251, 146, 60, 0.2)',
-                backdropFilter: 'blur(10px)',
-                filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))'
-              }}
-            >
-              Te Espero
-            </h2>
-            <div className="mt-8 w-24 h-px bg-linear-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
+        {/* Degradado desde abajo hacia arriba */}
+        <div className="absolute inset-0 bg-linear-to-t from-(--primary-container)/70 via-orange-300/30 to-transparent"></div>
+        
+        {/* Overlay sutil para profundidad */}
+        <div className="absolute inset-0 bg-linear-to-br from-orange-500/10 via-transparent to-transparent"></div>
+
+        {/* Contenido */}
+        <div className="relative h-full flex flex-col justify-end px-6 md:px-12 pb-16 md:pb-24">
+          <div className="max-w-2xl">
+            {/* Línea decorativa superior */}
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-px bg-white/40"></div>
+              <div className="w-2 h-2 rounded-full bg-white/60"></div>
+              <div className="w-6 h-px bg-white/40"></div>
+            </div>
+
+            {/* Texto principal sin cuadro - directo sobre el degradado */}
+            <div className="space-y-6">
+              <div>
+                <h2 
+                  className="text-7xl md:text-8xl lg:text-9xl tracking-wide uppercase leading-none text-(--primary-text)/80 font-playfair"
+                >
+                  Te
+                </h2>
+                <h2 
+                  className="text-7xl md:text-8xl lg:text-9xl tracking-wide uppercase leading-none text-(--primary-text)/80 font-playfair"
+                >
+                  Espero
+                </h2>
+              </div>
+
+              {/* Subtexto elegante */}
+              <div className="backdrop-blur-sm bg-white/20 rounded-xl px-6 py-3 inline-block border border-white/10">
+                <p className="text-(--primary-text)/90 text-sm tracking-[0.3em] uppercase">
+                  26 Diciembre 2025
+                </p>
+              </div>
+            </div>
+
+            {/* Línea decorativa inferior */}
+            <div className="flex items-center gap-3 mt-12">
+              <div className="w-20 h-px bg-linear-to-r from-white/60 to-transparent"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-white/70"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Elemento decorativo flotante - esquina superior derecha */}
+        <div className="absolute top-12 right-6 md:top-20 md:right-12">
+          <div className="backdrop-blur-sm bg-white/5 rounded-full p-6 border border-white/20">
+            <div className="w-3 h-3 rounded-full bg-white/40"></div>
+          </div>
+        </div>
+
+        {/* Elemento decorativo flotante - centro izquierda */}
+        <div className="hidden md:block absolute top-1/3 left-12">
+          <div className="backdrop-blur-sm bg-white/5 rounded-full p-4 border border-white/20">
+            <div className="w-2 h-2 rounded-full bg-white/30"></div>
           </div>
         </div>
       </footer>

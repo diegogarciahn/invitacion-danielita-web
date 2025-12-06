@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-container: #F2C3A7;
+  --primary-text: #591902;
+  --secondary-text: #BF6341;
 }
 
 @theme inline {

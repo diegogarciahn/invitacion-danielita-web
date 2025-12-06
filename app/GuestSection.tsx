@@ -29,12 +29,12 @@ export function GuestSection({ guestName, initialCount = 1 }: GuestSectionProps)
         <div className="text-center space-y-8">
           {/* Título */}
           <div className="space-y-4">
-            <p className="text-xs tracking-[0.4em] text-orange-400 uppercase">
+            <p className="text-xs tracking-[0.4em] text-(--primary-text) uppercase">
               Invitación especial para
             </p>
             <div className="relative inline-block">
               <div className="absolute -inset-4 bg-linear-to-r from-orange-100 via-orange-50 to-orange-100 opacity-40 blur-xl rounded-full"></div>
-              <h2 className="relative text-4xl md:text-5xl text-neutral-800 px-8 py-4">
+              <h2 className="relative text-4xl md:text-5xl text-neutral-800 px-8 py-4 font-playfair">
                 {guestName}
               </h2>
             </div>
@@ -49,7 +49,7 @@ export function GuestSection({ guestName, initialCount = 1 }: GuestSectionProps)
 
           {/* Control de cantidad de personas */}
           <div className="space-y-6 pt-4">
-            <p className="text-sm text-neutral-600">
+            <p className="text-sm text-neutral-600 font-libre-baskerville">
               Número de personas
             </p>
 
@@ -87,7 +87,7 @@ export function GuestSection({ guestName, initialCount = 1 }: GuestSectionProps)
 
             <button className="group relative mt-8 px-12 py-4 bg-linear-to-br from-orange-50 to-neutral-50 border-2 border-orange-200 text-neutral-800 rounded-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-orange-200/50 hover:scale-105 active:scale-100 hover:border-orange-300">
               <div className="absolute inset-0 bg-linear-to-br from-orange-100 to-orange-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative text-base font-medium tracking-wide">
+              <span className="relative text-base font-medium tracking-wide font-playfair">
                 Confirmar Asistencia
               </span>
             </button>
