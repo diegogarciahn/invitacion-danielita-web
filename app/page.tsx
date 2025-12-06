@@ -145,9 +145,9 @@ export default function QuinceanerraInvitation() {
                 <p className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
                   Fecha
                 </p>
-                <p className="text-2xl text-neutral-800">15</p>
-                <p className="text-neutral-600">Marzo 2025</p>
-                <p className="text-sm text-neutral-500">Sábado</p>
+                <p className="text-2xl text-neutral-800">26</p>
+                <p className="text-neutral-600">Diciembre 2025</p>
+                <p className="text-sm text-neutral-500">Viernes</p>
               </div>
             </div>
 
@@ -160,8 +160,7 @@ export default function QuinceanerraInvitation() {
                 <p className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
                   Hora
                 </p>
-                <p className="text-2xl text-neutral-800">20:00</p>
-                <p className="text-neutral-600">en punto</p>
+                <p className="text-2xl text-neutral-800">6:00 PM</p>
                 <p className="text-sm text-neutral-500">Recepción</p>
               </div>
             </div>
@@ -175,9 +174,9 @@ export default function QuinceanerraInvitation() {
                 <p className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
                   Lugar
                 </p>
-                <p className="text-neutral-800">La Fontana</p>
+                <p className="text-neutral-800">Colegio de abogados</p>
                 <p className="text-sm text-neutral-600">Salón de Eventos</p>
-                <p className="text-xs text-neutral-500">Av. Principal 123</p>
+                <p className="text-xs text-neutral-500">Calle salida a Marcovia</p>
               </div>
             </div>
           </div>
