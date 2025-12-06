@@ -11,7 +11,7 @@ import { GuestSection } from './GuestSection';
 
 export default function QuinceanerraInvitation() {
   // Fecha del evento - 26 de Diciembre de 2025 a las 20:00
-  const eventDate = new Date('2025-12-26T20:00:00');
+  const eventDate = new Date('2025-12-26T18:00:00');
   const guestName = "Familia García Pineda";
 
   return (
@@ -33,16 +33,16 @@ export default function QuinceanerraInvitation() {
         <div className="relative h-full flex items-end justify-center pb-20">
           <div className="text-center space-y-6 px-4">
             <div className="space-y-2">
-              <p className="text-sm tracking-[0.4em] text-neutral-600 uppercase">
+              <p className="text-sm tracking-[0.4em] text-neutral-600 uppercase font-playfair">
                 Mis Quince Años
               </p>
-              <h1 className="text-6xl md:text-7xl tracking-tight text-neutral-800">
+              <h1 className="text-6xl md:text-7xl tracking-tight text-neutral-700 font-libre-baskerville">
                 Daniela Bolaños
               </h1>
             </div>
             <div className="w-16 h-px bg-orange-400 mx-auto"></div>
-            <p className="text-neutral-600 tracking-wide">
-              26 de Diciembre, 2025
+            <p className="text-neutral-600 tracking-wide font-libre-baskerville">
+              26 de diciembre, 2025
             </p>
           </div>
         </div>
@@ -50,11 +50,11 @@ export default function QuinceanerraInvitation() {
 
       {/* Sección de bienvenida */}
       <section className="py-24 px-6 md:px-12 max-w-4xl mx-auto text-center">
-        <div className="space-y-6">
+        <div className="space-y-5">
           <p className="text-xs tracking-[0.3em] text-orange-400 uppercase">
             Una celebración especial
           </p>
-          <h2 className="text-3xl md:text-4xl text-neutral-800 max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-4xl text-neutral-800 max-w-2xl mx-auto font-libre-baskerville">
             Con gran alegría te invito a celebrar este momento tan importante en mi vida
           </h2>
           <p className="text-neutral-600 max-w-xl mx-auto leading-relaxed">
@@ -83,7 +83,7 @@ export default function QuinceanerraInvitation() {
             {/* Texto */}
             <div className="order-1 md:order-2 space-y-6">
               <div className="w-12 h-px bg-orange-400"></div>
-              <h3 className="text-3xl md:text-4xl text-neutral-800">
+              <h3 className="text-3xl md:text-4xl text-neutral-800 font-libre-baskerville">
                 Un sueño hecho realidad
               </h3>
               <div className="space-y-4 text-neutral-600 leading-relaxed">
@@ -92,12 +92,6 @@ export default function QuinceanerraInvitation() {
                 </p>
                 <p>
                   Quiero compartir este momento tan especial contigo, porque tu presencia y cariño han sido parte fundamental de mi camino. Gracias por estar aquí y ser parte de mi historia.
-                </p>
-                <p className="italic text-neutral-500">
-                  Con todo mi cariño,
-                </p>
-                <p className="text-orange-400">
-                  Daniela
                 </p>
               </div>
             </div>

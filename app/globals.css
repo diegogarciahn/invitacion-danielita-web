@@ -10,6 +10,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-playfair: var(--font-playfair-display);
+  --font-libre-baskerville: var(--font-libre-baskerville);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +24,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-playfair), Arial, Helvetica, sans-serif;
 }
