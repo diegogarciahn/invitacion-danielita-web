@@ -91,6 +91,15 @@ export function GuestSection({ guestName, initialCount = 1 }: GuestSectionProps)
                 Confirmar Asistencia
               </span>
             </button>
+
+            <div className="space-y-4">
+            <p className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
+              Confirma tu Asistencia
+            </p>
+            <p className="text-neutral-600 leading-relaxed">
+              Tu presencia es muy importante para mí. Por favor confirma tu asistencia antes del 1 de Marzo
+            </p>
+          </div>
           </div>
         </div>
       </div>

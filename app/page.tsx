@@ -198,27 +198,6 @@ export default function QuinceanerraInvitation() {
         </div>
       </section>
 
-      {/* Confirmación de asistencia */}
-      <section className="py-24 px-6 md:px-12 bg-neutral-50/50">
-        <div className="max-w-2xl mx-auto text-center space-y-8">
-          <div className="space-y-4">
-            <p className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
-              Confirma tu Asistencia
-            </p>
-            <p className="text-neutral-600 leading-relaxed">
-              Tu presencia es muy importante para mí. Por favor confirma tu asistencia antes del 1 de Marzo
-            </p>
-          </div>
-          
-          <div className="space-y-4">
-            <div className="inline-block bg-white px-8 py-4 rounded-full shadow-sm">
-              <p className="text-neutral-800">+52 555 123 4567</p>
-            </div>
-            <p className="text-xs text-neutral-500">WhatsApp disponible</p>
-          </div>
-        </div>
-      </section>
-
       {/* Sección de invitado */}
       <GuestSection guestName={guestName} />
 
