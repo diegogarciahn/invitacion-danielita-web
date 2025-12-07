@@ -181,6 +181,28 @@ export default function QuinceanerraInvitation() {
       <section className="py-20 px-6 md:px-12">
         <div className="max-w-3xl mx-auto">
           <div className="bg-linear-to-br from-orange-50 to-neutral-50 rounded-lg p-12 text-center space-y-6">
+            {/* Icono decorativo */}
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-orange-200/30 blur-xl rounded-full"></div>
+                <div className="relative w-16 h-16 rounded-full bg-linear-to-br from-orange-100 to-orange-50 flex items-center justify-center border border-orange-200/50">
+                  <svg 
+                    className="w-8 h-8 text-orange-400" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={1.5} 
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
             <p className="text-xs tracking-[0.3em] text-orange-400 uppercase">
               Código de Vestimenta
             </p>
@@ -188,6 +210,74 @@ export default function QuinceanerraInvitation() {
             <p className="text-sm text-neutral-600 italic">
               Se sugiere vestimenta en tonos claros y pasteles
             </p>
+          </div>
+        </div>
+      </section>
+
+
+      <section className="py-20 px-6 md:px-12">
+        <div className="max-w-2xl mx-auto">
+          <div className="relative">
+            {/* Fondo decorativo */}
+            <div className="absolute inset-0 bg-linear-to-br from-orange-50/50 via-white to-orange-50/30 rounded-2xl"></div>
+            
+            {/* Contenido */}
+            <div className="relative p-8 md:p-12 text-center space-y-6">
+              {/* Icono decorativo */}
+              <div className="flex justify-center">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-orange-200/30 blur-xl rounded-full"></div>
+                  <div className="relative w-16 h-16 rounded-full bg-linear-to-br from-orange-100 to-orange-50 flex items-center justify-center border border-orange-200/50">
+                    <svg 
+                      className="w-8 h-8 text-orange-400" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={1.5} 
+                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              {/* Separador decorativo */}
+              <div className="flex items-center justify-center gap-2">
+                <div className="w-8 h-px bg-linear-to-r from-transparent to-orange-300"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-orange-400"></div>
+                <div className="w-8 h-px bg-linear-to-l from-transparent to-orange-300"></div>
+              </div>
+
+              {/* Título */}
+              <div className="space-y-2">
+                <p className="text-xs tracking-[0.3em] text-orange-400 uppercase">
+                  Sugerencia
+                </p>
+                <h3 className="text-2xl md:text-3xl text-neutral-800">
+                  Tu presencia es el mejor regalo
+                </h3>
+              </div>
+
+              {/* Mensaje */}
+              <div className="space-y-4 max-w-lg mx-auto">
+                <p className="text-neutral-600 leading-relaxed">
+                  Si deseas tener un detalle conmigo, agradecería que fuera en efectivo. 
+                  Esto me ayudará a cumplir mis sueños y metas para esta nueva etapa.
+                </p>
+                <p className="text-sm text-neutral-500 italic">
+                  Sin embargo, lo más importante es que celebres este día especial a mi lado
+                </p>
+              </div>
+
+              {/* Decoración inferior */}
+              <div className="pt-4">
+                <div className="w-12 h-px bg-orange-300/50 mx-auto"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
