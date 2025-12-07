@@ -108,10 +108,10 @@ export default async function QuinceanerraInvitation({ params }: { params: { gue
             Una celebración especial
           </p>
           <h2 className="text-2xl md:text-4xl text-neutral-800 max-w-2xl mx-auto font-libre-baskerville">
-            Con gran alegría te invito a celebrar este momento tan importante en mi vida
+            Con gran alegría te invito a celebrar este momento tan importante en mi vida.
           </h2>
-          <p className="text-neutral-600 max-w-xl mx-auto leading-relaxed">
-            Acompáñame en esta noche mágica donde daré un paso más hacia mis sueños
+          <p className="text-neutral-600 max-w-xl mx-auto leading-relaxed font-libre-baskerville">
+            Acompáñame en esta noche mágica donde daré un paso más hacia mis sueños.
           </p>
         </div>
       </section>
@@ -140,10 +140,10 @@ export default async function QuinceanerraInvitation({ params }: { params: { gue
                 Un sueño hecho realidad
               </h3>
               <div className="space-y-4 text-neutral-600 leading-relaxed">
-                <p>
+                <p className='font-libre-baskerville'>
                   Hoy cumplo quince años y mi corazón está lleno de gratitud. Este día marca el inicio de una nueva etapa en mi vida, llena de sueños, esperanzas y metas por alcanzar.
                 </p>
-                <p>
+                <p className='font-libre-baskerville'>
                   Quiero compartir este momento tan especial contigo, porque tu presencia y cariño han sido parte fundamental de mi camino. Gracias por estar aquí y ser parte de mi historia.
                 </p>
               </div>
@@ -223,7 +223,7 @@ export default async function QuinceanerraInvitation({ params }: { params: { gue
                 </p>
                 <p className="text-neutral-800">Colegio de abogados</p>
                 <p className="text-sm text-neutral-600">Salón de Eventos</p>
-                <p className="text-xs text-neutral-500">Calle salida a Marcovia</p>
+                <p className="text-xs text-neutral-500">Calle salida a Marcovia, Choluteca.</p>
               </div>
             </div>
           </div>
@@ -259,10 +259,7 @@ export default async function QuinceanerraInvitation({ params }: { params: { gue
             <p className="text-xs tracking-[0.3em] text-orange-400 uppercase">
               Código de Vestimenta
             </p>
-            <p className="text-2xl text-neutral-800">Etiqueta Formal</p>
-            <p className="text-sm text-neutral-600 italic">
-              Se sugiere vestimenta en tonos claros y pasteles
-            </p>
+            <p className="text-2xl text-neutral-800 font-libre-baskerville">Etiqueta Formal</p>
           </div>
         </div>
       </section>
@@ -310,19 +307,19 @@ export default async function QuinceanerraInvitation({ params }: { params: { gue
                 <p className="text-xs tracking-[0.3em] text-orange-400 uppercase">
                   Sugerencia
                 </p>
-                <h3 className="text-2xl md:text-3xl text-neutral-800">
-                  Tu presencia es el mejor regalo
+                <h3 className="text-2xl md:text-3xl text-neutral-800 font-libre-baskerville">
+                  Tu presencia es mi mejor regalo
                 </h3>
               </div>
 
               {/* Mensaje */}
               <div className="space-y-4 max-w-lg mx-auto">
-                <p className="text-neutral-600 leading-relaxed">
+                <p className="text-neutral-600 leading-relaxed font-libre-baskerville">
                   Si deseas tener un detalle conmigo, agradecería que fuera en efectivo. 
                   Esto me ayudará a cumplir mis sueños y metas para esta nueva etapa.
                 </p>
                 <p className="text-sm text-neutral-500 italic">
-                  Sin embargo, lo más importante es que celebres este día especial a mi lado
+                  Sin embargo, lo más importante es que celebres este día especial a mi lado.
                 </p>
               </div>
 
