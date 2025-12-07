@@ -336,7 +336,7 @@ export default async function QuinceanerraInvitation({ params }: { params: { gue
       </section>
 
       {/* Sección de invitado */}
-      <GuestSection guestName={guestName} initialCount={guestCount} />
+      <GuestSection guestName={guestName} initialCount={guestCount} guestId={guestid} />
 
       {/* Footer con efecto glassmorphism */}
       {/* Footer - Diseño creativo con imagen y texto "Te Espero" */}

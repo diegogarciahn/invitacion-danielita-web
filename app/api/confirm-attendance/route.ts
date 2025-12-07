@@ -5,7 +5,7 @@ import { app, db } from '@/firebase';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { guestId, numberOfPeople, message, confirmed } = body;
+    const { guestId, numberOfPeople, confirmed } = body;
     console.log('Received data:', body);
     if (!guestId || !numberOfPeople || typeof confirmed !== 'boolean') {
       return NextResponse.json({ error: 'Datos incompletos' }, { status: 400 });
