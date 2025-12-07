@@ -3,6 +3,7 @@ import headerImage from '@/assets/44f8e112051cde060cb818cc3143c9e98e47507c.png';
 import quinceaneraPhoto from '@/assets/a9f9fa670884b23c08c045cbcddb0c8544041d94.png';
 import quinceaneraPhoto2 from '@/assets/1865e3ec7a35bff53dbe6d6684b7b561ac0bedf0.png';
 import quinceaneraPhoto3 from '@/assets/45cd483a805c44404270bc8cea240a9907a15a62.png';
+import quinceaneraPhoto4 from '@/assets/DODU6_3311.jpg';
 import countdownBg from '@/assets/b79ce2fd62fdaac53ac4e4be39ddaff686801b26.png';
 import footerImage from '@/assets/84e6b2ca1b48490a0e3950cbc64d877e85505545.png';
 import { PhotoSlider } from './PhotoSlider';
@@ -126,7 +127,7 @@ export default async function QuinceanerraInvitation({ params }: { params: { gue
                 <div className="absolute -inset-4 bg-linear-to-br from-orange-100 to-orange-50 rounded-lg opacity-50"></div>
                 <div className="relative">
                   <PhotoSlider
-                    images={[quinceaneraPhoto, quinceaneraPhoto2, quinceaneraPhoto3]}
+                    images={[quinceaneraPhoto, quinceaneraPhoto2, quinceaneraPhoto3, quinceaneraPhoto4]}
                     autoplaySpeed={4000}
                   />
                 </div>
