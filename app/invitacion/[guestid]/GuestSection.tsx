@@ -184,7 +184,7 @@ export function GuestSection({ guestName, initialCount = 1, guestId, onConfirmat
             )}
 
             {guestData?.confirmed && (
-              <div className="mt-6 p-4 rounded-lg bg-blue-50 border-2 border-blue-200 text-blue-800">
+              <div className="mt-6 p-4 rounded-lg bg-(--primary-container)/20  text-(--primary-text)">
                 <p className="text-sm font-medium">✓ Ya has confirmado tu asistencia</p>
                 {guestData.personas && (
                   <p className="text-xs mt-1">Personas confirmadas: {guestData.personas}</p>
@@ -197,7 +197,7 @@ export function GuestSection({ guestName, initialCount = 1, guestId, onConfirmat
                 Confirma tu Asistencia
               </p>
               <p className="text-neutral-600 leading-relaxed">
-                Tu presencia es muy importante para mí. Por favor confirma tu asistencia antes del 1 de Marzo
+                Tu presencia es muy importante para mí. Por favor confirma tu asistencia antes del 1 de Marzo.
               </p>
             </div>
           </div>
