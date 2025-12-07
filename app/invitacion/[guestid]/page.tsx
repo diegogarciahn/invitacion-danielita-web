@@ -211,7 +211,7 @@ export default function QuinceanerraInvitation() {
         </div>
 
         {/* Degradado desde abajo hacia arriba */}
-        <div className="absolute inset-0 bg-linear-to-t from-(--primary-container)/70 via-orange-300/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-(--primary-container)/60 via-orange-300/20 to-transparent"></div>
         
         {/* Overlay sutil para profundidad */}
         <div className="absolute inset-0 bg-linear-to-br from-orange-500/10 via-transparent to-transparent"></div>
@@ -230,15 +230,15 @@ export default function QuinceanerraInvitation() {
             <div className="space-y-6">
               <div>
                 <h2 
-                  className="text-7xl md:text-8xl lg:text-9xl tracking-wide uppercase leading-none text-(--primary-text)/80 font-playfair"
+                  className="text-7xl md:text-8xl lg:text-9xl tracking-wide uppercase leading-none text-(--primary-text)/80 font-libre-baskerville"
                 >
-                  Te
+                  Mis 15 Años
                 </h2>
-                <h2 
+                {/* <h2 
                   className="text-7xl md:text-8xl lg:text-9xl tracking-wide uppercase leading-none text-(--primary-text)/80 font-playfair"
                 >
                   Espero
-                </h2>
+                </h2> */}
               </div>
 
               {/* Subtexto elegante */}
