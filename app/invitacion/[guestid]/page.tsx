@@ -8,11 +8,64 @@ import footerImage from '@/assets/84e6b2ca1b48490a0e3950cbc64d877e85505545.png';
 import { PhotoSlider } from './PhotoSlider';
 import { Countdown } from './Countdown';
 import { GuestSection } from './GuestSection';
+import { Metadata } from 'next';
+import { arrayUnion, doc, getDoc, updateDoc } from 'firebase/firestore';
+import { db } from '@/firebase';
 
-export default function QuinceanerraInvitation() {
+export default async function QuinceanerraInvitation({ params }: { params: { guestid: string } }) {
   // Fecha del evento - 26 de Diciembre de 2025 a las 20:00
+  const { guestid } = await params; 
+
+  console.log('Guest ID recibido:', guestid);
+
+  if (!guestid) {
+    // Mensaje mejorado para guestId inválido
+    return (
+      <div className="flex flex-col items-center justify-center h-screen w-screen introduction-background px-4 relative overflow-hidden">
+        {/* Flor de fondo con opacidad y object-fit cover */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none overflow-hidden">
+          <img src="/flor-1.svg" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="relative max-w-md z-10">
+          {/* Tarjeta blanca */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 text-center border border-(--primary) relative z-10">
+            <h2 className="font-alex text-4xl text-(--primary-text) mb-4">¡Ups! Invitación no encontrada</h2>
+            <p className="font-bodoni text-l text-gray-700 mb-6">El enlace que has utilizado no es válido o no corresponde a ningún invitado registrado.<br />Por favor revisa tu invitación o contacta a los anfitriones para más información.</p>
+            <span className="inline-block px-4 py-2 bg-(--primary-text)/10 text-(--primary-text) rounded-full font-bodoni border border-(--primary-text)">Código de invitado no válido</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   const eventDate = new Date('2025-12-26T18:00:00');
-  const guestName = "Familia García Pineda";
+
+  // Consulta Firestore para obtener datos del invitado
+  const docRef = doc(db, 'invitados', guestid.trim());
+  const docSnap = await getDoc(docRef);
+
+  if (!docSnap.exists() || !guestid) {
+    return (
+      <div className="py-72 w-full px-8 text-center">
+        <h2 className="font-alex text-5xl text-(--primary)">Invitación no encontrada</h2>
+        <p className="font-bodoni text-sm">El enlace proporcionado no es válido. Por favor, verifica el enlace o contacta al organizador.</p>
+      </div>
+    );
+  }
+
+  const now = new Date();
+
+  if (!docSnap.exists()) {
+    await updateDoc(docRef, { Abierta: true, Aperturas: [now] });
+  } else {
+    // Agregar la hora de apertura actual a la lista Aperturas
+    await updateDoc(docRef, { Aperturas: arrayUnion(now) });
+  }
+
+  const data = docSnap.data();
+  const guestName = data?.Nombre || "Invitado";
+  const guestCount = data?.Personas || 1;
+  console.log('Datos del invitado:', data);
 
   return (
     <div className="min-h-screen bg-white">
@@ -283,7 +336,7 @@ export default function QuinceanerraInvitation() {
       </section>
 
       {/* Sección de invitado */}
-      <GuestSection guestName={guestName} />
+      <GuestSection guestName={guestName} initialCount={guestCount} />
 
       {/* Footer con efecto glassmorphism */}
       {/* Footer - Diseño creativo con imagen y texto "Te Espero" */}

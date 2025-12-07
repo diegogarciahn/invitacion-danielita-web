@@ -12,7 +12,7 @@ export function GuestSection({ guestName, initialCount = 1 }: GuestSectionProps)
   const [guestCount, setGuestCount] = useState(initialCount);
 
   const increment = () => {
-    if (guestCount < 10) {
+    if (guestCount < initialCount) {
       setGuestCount(guestCount + 1);
     }
   };
@@ -77,7 +77,7 @@ export function GuestSection({ guestName, initialCount = 1 }: GuestSectionProps)
               {/* Botón incrementar */}
               <button
                 onClick={increment}
-                disabled={guestCount >= 10}
+                disabled={guestCount >= initialCount}
                 className="group w-12 h-12 rounded-full border-2 border-orange-300 hover:border-orange-400 disabled:border-neutral-200 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center bg-white hover:bg-orange-50"
                 aria-label="Aumentar cantidad"
               >
