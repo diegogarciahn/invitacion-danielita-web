@@ -173,6 +173,15 @@ export default async function QuinceanerraInvitation({ params }: { params: { gue
             <p className="text-neutral-600 tracking-wide font-libre-baskerville">
               26 de diciembre, 2025
             </p>
+            <div className="w-20 h-px bg-orange-300/50 mx-auto mt-8"></div>
+            <div className="space-y-3 mt-8 max-w-md mx-auto">
+              <p className="text-sm text-neutral-700 leading-relaxed font-libre-baskerville italic">
+                "Sobre toda cosa guardada, guarda tu corazón; <br/>Porque de él mana la vida."
+              </p>
+              <p className="text-xs tracking-[0.2em] text-neutral-500 uppercase">
+                Proverbios 4:23
+              </p>
+            </div>
           </div>
         </div>
       </header>
