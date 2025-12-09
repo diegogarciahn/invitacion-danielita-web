@@ -197,7 +197,7 @@ export function GuestSection({ guestName, initialCount = 1, guestId, onConfirmat
                 Confirma tu Asistencia
               </p>
               <p className="text-neutral-600 leading-relaxed">
-                Tu presencia es muy importante para mí. Por favor confirma tu asistencia antes del 1 de Marzo.
+                Tu presencia es muy importante para mí. Por favor confirma tu asistencia antes del 15 de Diciembre.
               </p>
             </div>
           </div>

@@ -220,7 +220,7 @@ export default async function QuinceanerraInvitation({ params }: { params: { gue
                   Hoy cumplo Quince Años y mi corazón está lleno de gratitud. Este día marca el inicio de una nueva etapa en mi vida, llena de sueños, esperanzas y metas por alcanzar.
                 </p>
                 <p className='font-libre-baskerville'>
-                  Quiero compartir este momento tan especial contigo, porque tu presencia y cariño han sido parte fundamental de mi camino. Gracias por estar aquí y ser parte de mi historia.
+                  Quiero compartir este momento tan especial contigo, porque tu presencia y cariño han sido parte fundamental de mi camino.<br/><br/>Gracias por estar aquí y ser parte de mi historia.
                 </p>
               </div>
             </div>
