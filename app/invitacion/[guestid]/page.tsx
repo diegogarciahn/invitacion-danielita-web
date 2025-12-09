@@ -13,6 +13,82 @@ import { Metadata } from 'next';
 import { arrayUnion, doc, getDoc, updateDoc } from 'firebase/firestore';
 import { db } from '@/firebase';
 
+// Función para generar meta tags dinámicos
+export async function generateMetadata({ params }: { params: { guestid: string } }): Promise<Metadata> {
+  const { guestid: guestId } = await params;
+  
+  try {
+    // Consultar Firestore para obtener el nombre del invitado
+    const docRef = doc(db, 'invitados', guestId.trim());
+    const docSnap = await getDoc(docRef);
+    
+    if (docSnap.exists()) {
+      const data = docSnap.data();
+      const nombre = data?.Nombre || 'Invitado especial';
+      const personas = data?.Personas || 1;
+      
+      const title = `¡${nombre}, ${personas > 1 ? 'están invitados' : 'estás invitado'} a mis 15 años!`;
+      const description = `Hola ${nombre}, me encantaría que me ${personas > 1 ? 'acompañen' : 'acompañes'} en este día tan especial. ${personas > 1 ? 'Su' : 'Tu'} invitación incluye ${personas} ${personas === 1 ? 'persona' : 'personas'}.`;
+
+      // Obtiene el host desde variable de entorno o fallback
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+      
+      // Agregar timestamp para evitar cacheo de imagen
+      const timestamp = Date.now();
+      const imageUrl = `${baseUrl}/api/og?guestId=${guestId}&t=${timestamp}`;
+      
+      return {
+        title,
+        description,
+        openGraph: {
+          title,
+          description,
+          type: 'website',
+          siteName: 'Mis 15 años',
+          images: [
+            {
+              url: imageUrl,
+              width: 1200,
+              height: 630,
+              alt: `Invitación de 15 años para ${nombre}`,
+            }
+          ],
+        },
+        twitter: {
+          card: 'summary_large_image',
+          title,
+          description,
+          images: [imageUrl],
+        },
+      };
+    }
+  } catch (error) {
+    console.error('Error generating metadata:', error);
+  }
+  
+  // Fallback si no se encuentra el invitado
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  const timestamp = Date.now();
+  
+  return {
+    title: 'Invitación de 15 años',
+    description: 'Me encantaría que me acompañes en este día tan especial.',
+    openGraph: {
+      title: 'Invitación de 15 años',
+      description: 'Me encantaría que me acompañes en este día tan especial.',
+      type: 'website',
+      siteName: 'Mis 15 años',
+      images: [`${baseUrl}/api/og?guestId=${guestId}&t=${timestamp}`],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Invitación de 15 años',
+      description: 'Me encantaría que me acompañes en este día tan especial.',
+      images: [`${baseUrl}/api/og?guestId=${guestId}&t=${timestamp}`],
+    },
+  };
+}
+
 export default async function QuinceanerraInvitation({ params }: { params: { guestid: string } }) {
   // Fecha del evento - 26 de Diciembre de 2025 a las 20:00
   const { guestid } = await params; 
@@ -66,7 +142,6 @@ export default async function QuinceanerraInvitation({ params }: { params: { gue
   const data = docSnap.data();
   const guestName = data?.Nombre || "Invitado";
   const guestCount = data?.Personas || 1;
-  console.log('Datos del invitado:', data);
 
   return (
     <div className="min-h-screen bg-white">
@@ -142,7 +217,7 @@ export default async function QuinceanerraInvitation({ params }: { params: { gue
               </h3>
               <div className="space-y-4 text-neutral-600 leading-relaxed">
                 <p className='font-libre-baskerville'>
-                  Hoy cumplo quince años y mi corazón está lleno de gratitud. Este día marca el inicio de una nueva etapa en mi vida, llena de sueños, esperanzas y metas por alcanzar.
+                  Hoy cumplo Quince Años y mi corazón está lleno de gratitud. Este día marca el inicio de una nueva etapa en mi vida, llena de sueños, esperanzas y metas por alcanzar.
                 </p>
                 <p className='font-libre-baskerville'>
                   Quiero compartir este momento tan especial contigo, porque tu presencia y cariño han sido parte fundamental de mi camino. Gracias por estar aquí y ser parte de mi historia.

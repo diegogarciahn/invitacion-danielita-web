@@ -98,7 +98,7 @@ export async function GET(request: Request) {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: '#9ABFA5', // --primary-container
+            backgroundColor: '#F2C3A7', // --primary-container (base color)
             position: 'relative',
           }}
         >
@@ -110,7 +110,7 @@ export async function GET(request: Request) {
               left: '30px',
               right: '30px',
               bottom: '30px',
-              border: '3px solid #FEFFDB', // --on-primary-container-highlight
+              border: '3px solid #FFF8F3', // --on-primary-container-highlight (blanco cálido)
               borderRadius: '24px',
               display: 'flex',
               zIndex: 3,
@@ -153,7 +153,7 @@ export async function GET(request: Request) {
               style={{
                 fontSize: '90px',
                 fontFamily: 'Alex Brush',
-                color: 'white',
+                color: '#3D1501', // Marrón oscuro cálido para mejor contraste
                 fontWeight: '400',
                 letterSpacing: '1px',
                 textAlign: 'center',
@@ -195,7 +195,7 @@ export async function GET(request: Request) {
               style={{
                 width: '480px',
                 height: '2px',
-                backgroundColor: '#FEFFDB', // --on-primary-container-highlight
+                backgroundColor: '#D4905E', // Tono cálido medio para división
                 margin: '10px 0',
               }}
             />
@@ -203,19 +203,13 @@ export async function GET(request: Request) {
               style={{
                 fontSize: '48px',
                 fontFamily: 'Bodoni Moda',
-                color: '#526859', // --primary
+                color: '#3D1501', // Marrón oscuro cálido consistente
                 marginBottom: '0px',
                 marginTop: '0px',
                 fontWeight: '400',
               }}
             >
-              Lizbeth<span style={{
-                fontFamily: 'Alex Brush',
-                fontSize: '44px',
-                paddingLeft: '15px',
-                paddingRight: '15px',
-                paddingTop: '20px'
-              }}>&</span>Diego
+              Angie Daniela
             </h2>
             {/* Fecha como en Header */}
             {/* <p
@@ -240,7 +234,7 @@ export async function GET(request: Request) {
               left: '60px',
               width: '40px',
               height: '40px',
-              border: '2px solid #FEFFDB',
+              border: '2px solid #FFF8F3',
               borderRadius: '50%',
               opacity: 0.4,
             }}
@@ -253,7 +247,7 @@ export async function GET(request: Request) {
               right: '60px',
               width: '40px',
               height: '40px',
-              border: '2px solid #FEFFDB',
+              border: '2px solid #FFF8F3',
               borderRadius: '50%',
               opacity: 0.4,
             }}
@@ -266,7 +260,7 @@ export async function GET(request: Request) {
               left: '60px',
               width: '40px',
               height: '40px',
-              border: '2px solid #FEFFDB',
+              border: '2px solid #FFF8F3',
               borderRadius: '50%',
               opacity: 0.4,
             }}
@@ -279,7 +273,7 @@ export async function GET(request: Request) {
               right: '60px',
               width: '40px',
               height: '40px',
-              border: '2px solid #FEFFDB',
+              border: '2px solid #FFF8F3',
               borderRadius: '50%',
               opacity: 0.4,
             }}
