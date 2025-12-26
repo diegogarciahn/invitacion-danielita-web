@@ -115,7 +115,8 @@ export default async function QuinceanerraInvitation({ params }: { params: { gue
     );
   }
 
-  const eventDate = new Date('2025-12-26T18:00:00');
+  // Zona horaria de Tegucigalpa, Honduras (UTC-6)
+  const eventDate = new Date('2025-12-26T18:00:00-06:00');
 
   // Consulta Firestore para obtener datos del invitado
   const docRef = doc(db, 'invitados', guestid.trim());
@@ -130,7 +131,9 @@ export default async function QuinceanerraInvitation({ params }: { params: { gue
     );
   }
 
-  const now = new Date();
+  // Obtener fecha actual en zona horaria de Tegucigalpa, Honduras
+  const nowInHonduras = new Date().toLocaleString('en-US', { timeZone: 'America/Tegucigalpa' });
+  const now = new Date(nowInHonduras);
 
   if (!docSnap.exists()) {
     await updateDoc(docRef, { Abierta: true, Aperturas: [now] });
